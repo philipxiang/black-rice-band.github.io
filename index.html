@@ -3,183 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Black Rice - A hard rock band from St. John's School, Houston, inspired by Def Leppard and KISS">
-    <title>Black Rice - Hard Rock Band</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>BLACK RICE | Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --sjs-red: #A41034; --sjs-black: #101010; --chrome: #cbd5e0; }
+        body { margin: 0; padding: 0; background-color: var(--sjs-black); color: white; font-family: 'Oswald', sans-serif; overflow-x: hidden; }
+        body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); opacity: 0.2; z-index: -1; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(0,0,0,0.9); border-bottom: 3px solid var(--sjs-red); position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Metal Mania', cursive; font-size: 2.5rem; color: var(--sjs-red); text-shadow: 2px 2px 0px white; letter-spacing: 4px; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { text-decoration: none; color: white; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        nav ul li a:hover { color: var(--sjs-red); }
+        .hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=2070'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 10px solid var(--sjs-red); }
+        .hero h1 { font-size: 6rem; margin: 0; font-family: 'Metal Mania', cursive; color: white; text-shadow: 5px 5px 0px var(--sjs-red); }
+        .hero p { font-size: 1.5rem; letter-spacing: 5px; color: white; font-weight: bold; margin-top: -10px; }
+        .cta-button { margin-top: 30px; padding: 15px 40px; background: var(--sjs-red); color: white; text-decoration: none; font-size: 1.2rem; font-weight: bold; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: transform 0.2s; border: none; cursor: pointer; }
+        .cta-button:hover { transform: scale(1.1) rotate(-2deg); background: white; color: var(--sjs-red); }
+        .tour-dates { padding: 80px 10%; background: #151515; }
+        .section-title { font-family: 'Metal Mania', cursive; font-size: 3rem; color: var(--sjs-red); text-align: center; margin-bottom: 50px; }
+        .date-row { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid #333; transition: 0.3s; }
+        .date-row:hover { background: var(--sjs-red); color: white; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.5; border-top: 1px solid #333; }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h1>BLACK RICE</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#music" class="nav-link">Music</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+
+    <nav>
+        <div class="logo">BLACK RICE</div>
+        <ul>
+            <li><a href="#vault">The Vault</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#lineup">Lineup</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">BLACK RICE</h1>
-            <p class="hero-subtitle">St. John's School Hard Rock Band</p>
-            <p class="hero-tagline">Bringing the Thunder Since 2026</p>
-            <a href="#about" class="cta-button">Rock With Us</a>
-        </div>
-        <div class="hero-overlay"></div>
-    </section>
+    <header class="hero">
+        <p>ST. JOHN'S SCHOOL • HOUSTON</p>
+        <h1>BLACK RICE</h1>
+        <p>HARD ROCK REBELS</p>
+        <a href="#" class="cta-button">ENTER THE VAULT</a>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About the Band</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Black Rice is St. John's School's premier hard rock band, bringing explosive energy and classic rock vibes to Houston's middle school music scene.</p>
-                    <p>Influenced by legendary bands like Def Leppard and KISS, we deliver powerful performances that blend technical skill with raw rock 'n' roll attitude.</p>
-                    <p>Our mission is simple: to rock hard, honor our school, and inspire the next generation of rock musicians.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>🎸</h3>
-                        <p>4 Members</p>
-                    </div>
-                    <div class="stat">
-                        <h3>🔥</h3>
-                        <p>Hard Rock</p>
-                    </div>
-                    <div class="stat">
-                        <h3>🏫</h3>
-                        <p>SJS Pride</p>
-                    </div>
-                </div>
-            </div>
+    <section id="tour" class="tour-dates">
+        <h2 class="section-title">THE ROAD TO RICE STADIUM</h2>
+        <div class="date-row">
+            <span>OCT 25</span>
+            <span>THE QUAD (SJS HOUSTON)</span>
+            <span>FREE ENTRY</span>
+        </div>
+        <div class="date-row">
+            <span>NOV 12</span>
+            <span>WAREHOUSE LIVE - MIDTOWN</span>
+            <span>GET TICKETS</span>
+        </div>
+        <div class="date-row">
+            <span>JAN 20</span>
+            <span>TAILGATE VS. KINKAID</span>
+            <span>LOUD & PROUD</span>
         </div>
     </section>
 
-    <!-- Music Section -->
-    <section id="music" class="music">
-        <div class="container">
-            <h2 class="section-title">Our Sound</h2>
-            <div class="music-content">
-                <div class="influence-card">
-                    <h3>Def Leppard Inspired</h3>
-                    <p>Melodic hard rock with powerful hooks and arena-ready anthems</p>
-                </div>
-                <div class="influence-card">
-                    <h3>KISS Energy</h3>
-                    <p>High-octane performances with theatrical flair and rock attitude</p>
-                </div>
-                <div class="influence-card">
-                    <h3>Original Sound</h3>
-                    <p>Blending classic rock influences with our own modern edge</p>
-                </div>
-            </div>
-            <div class="setlist">
-                <h3>Current Setlist Highlights</h3>
-                <ul>
-                    <li>Pour Some Sugar on Me (Def Leppard cover)</li>
-                    <li>Rock and Roll All Nite (KISS cover)</li>
-                    <li>Original: Thunder Over Houston</li>
-                    <li>Original: Maverick Anthem</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="placeholder-img">
-                        <p>🎸</p>
-                        <span>Band Photo</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img">
-                        <p>🥁</p>
-                        <span>Live Performance</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img">
-                        <p>🎤</p>
-                        <span>On Stage</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img">
-                        <p>🎵</p>
-                        <span>Recording Session</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img">
-                        <p>⚡</p>
-                        <span>School Concert</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-img">
-                        <p>🤘</p>
-                        <span>Meet & Greet</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Book Us for Your Event</h3>
-                    <p>Interested in having Black Rice perform at your school event or party? We'd love to rock out with you!</p>
-                    <div class="contact-details">
-                        <p><strong>📧 Email:</strong> blackrice@sjs.org</p>
-                        <p><strong>🏫 Location:</strong> St. John's School, Houston, TX</p>
-                        <p><strong>🎸 Genre:</strong> Hard Rock</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Black Rice Band | St. John's School, Houston</p>
-            <p class="footer-tagline">Keep Rockin' 🤘</p>
-        </div>
+    <footer>
+        &copy; 2024 BLACK RICE BAND. PROUD MAVERICK NATION.
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
