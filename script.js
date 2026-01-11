@@ -105,11 +105,15 @@ if (hero) {
     });
 }
 
-// Dynamic year in footer
+// Dynamic year in footer and hero
 const currentYear = new Date().getFullYear();
 const footerText = document.querySelector('.footer p');
 if (footerText && footerText.textContent.includes('2026')) {
     footerText.textContent = footerText.textContent.replace('2026', currentYear);
+}
+const heroTagline = document.querySelector('.hero-tagline');
+if (heroTagline && heroTagline.textContent.includes('2026')) {
+    heroTagline.textContent = heroTagline.textContent.replace('2026', currentYear);
 }
 
 // Easter egg: Konami code for special effect
