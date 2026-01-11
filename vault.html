@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE VAULT | Black Rice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --sjs-red: #A41034; --sjs-black: #101010; }
+        body { 
+            margin: 0; 
+            background-color: var(--sjs-black); 
+            color: white; 
+            font-family: 'Oswald', sans-serif; 
+        }
+
+        /* VCR/Security Cam Overlay Effect */
+        body::after {
+            content: "REC ●";
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            color: red;
+            font-family: monospace;
+            font-size: 1.5rem;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+
+        nav { 
+            padding: 20px; 
+            background: black; 
+            border-bottom: 2px solid var(--sjs-red); 
+            display: flex; 
+            justify-content: space-between;
+        }
+
+        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+        
+        .vault-header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #222, #101010);
+        }
+
+        h1 { font-family: 'Metal Mania', cursive; font-size: 4rem; color: var(--sjs-red); margin: 0; }
+        p { letter-spacing: 2px; opacity: 0.8; }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        .video-card:hover {
+            border-color: var(--sjs-red);
+            transform: translateY(-5px);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid var(--sjs-red);
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--sjs-red);
+            display: block;
+        }
+
+        .video-date {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--sjs-red);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← BACK TO STAGE</a>
+        <div style="color:var(--sjs-red); font-family:'Metal Mania'">PROPERTY OF SJS ROCK DEPT.</div>
+    </nav>
+
+    <div class="vault-header">
+        <h1>THE VAULT</h1>
+        <p>RAW PRACTICE TAPES & BEHIND-THE-SCENES SHREDDING</p>
+    </div>
+
+    <section class="video-grid">
+        
+        <!-- VIDEO CARD 1 -->
+        <div class="video-card">
+            <video controls>
+                <source src="videos/practice-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-info">
+                <span class="video-title">Basement Jam: Maverick Midnight</span>
+                <span class="video-date">Recorded: Oct 12, 2023</span>
+            </div>
+        </div>
+
+        <!-- VIDEO CARD 2 -->
+        <div class="video-card">
+            <video controls>
+                <source src="videos/solo-practice.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </div>
+            <div class="video-info">
+                <span class="video-title">Guitar Solo Run-through</span>
+                <span class="video-date">Recorded: Nov 02, 2023</span>
+            </div>
+        </div>
+
+    </section>
+
+    <footer style="text-align: center; padding: 50px; opacity: 0.4; font-size: 0.7rem;">
+        CLASSIFIED MATERIAL - BLACK RICE BAND HOUSTON
+    </footer>
+
+</body>
+</html>
