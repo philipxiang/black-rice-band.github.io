@@ -1,131 +1,100 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE VAULT | Black Rice</title>
-    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --sjs-red: #A41034; --sjs-black: #101010; }
-        body { 
-            margin: 0; 
-            background-color: var(--sjs-black); 
-            color: white; 
-            font-family: 'Oswald', sans-serif; 
-        }
-
-        /* VCR/Security Cam Overlay Effect */
-        body::after {
-            content: "REC ●";
-            position: fixed;
-            top: 20px;
-            right: 30px;
-            color: red;
-            font-family: monospace;
-            font-size: 1.5rem;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
-
-        nav { 
-            padding: 20px; 
-            background: black; 
-            border-bottom: 2px solid var(--sjs-red); 
-            display: flex; 
-            justify-content: space-between;
-        }
-
-        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; }
-        
-        .vault-header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(to bottom, #222, #101010);
-        }
-
-        h1 { font-family: 'Metal Mania', cursive; font-size: 4rem; color: var(--sjs-red); margin: 0; }
-        p { letter-spacing: 2px; opacity: 0.8; }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .video-card {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            padding: 10px;
-            transition: 0.3s;
-        }
-
-        .video-card:hover {
-            border-color: var(--sjs-red);
-            transform: translateY(-5px);
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid var(--sjs-red);
-        }
-
-        .video-info {
-            padding: 15px;
-        }
-
-        .video-title {
-            font-weight: bold;
-            text-transform: uppercase;
-            color: var(--sjs-red);
-            display: block;
-        }
-
-        .video-date {
-            font-size: 0.8rem;
-            opacity: 0.6;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--sjs-red);
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Media | Black Rice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Bebas+Neue&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">← BACK TO STAGE</a>
-        <div style="color:var(--sjs-red); font-family:'Metal Mania'">PROPERTY OF SJS ROCK DEPT.</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">BLACK RICE</span>
+                <span class="logo-tag">SJS &middot; HTX</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#home"  class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">The Band</a></li>
+                <li><a href="index.html#shows" class="nav-link">Shows</a></li>
+                <li><a href="vault.html"       class="nav-link nav-highlight">Media</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="vault-header">
-        <h1>THE VAULT</h1>
-        <p>RAW PRACTICE TAPES & BEHIND-THE-SCENES SHREDDING</p>
-    </div>
+    <main class="media-page">
+        <div class="container">
 
-    <section class="video-grid">
-        
-        <!-- VIDEO CARD 1 -->
-        <div class="video-card">
-            <!-- A cool thumbnail image of the band -->
-            <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=1000&auto=format&fit=crop" style="width:100%; border-bottom: 2px solid var(--sjs-red);">
-            <div class="video-info">
-                <span class="video-title">First Practice Tape</span>
-                <p>RAW ICLOUD FOOTAGE</p>
-                <a href="https://www.icloud.com/photos/#/icloudlinks/0885LMAOGJtV6meJjw7LFlroQ/" target="_blank" class="cta-button" style="display:block; text-align:center; padding:10px;">WATCH TAPE</a>
+            <h1 class="section-title">Photos &amp; Videos</h1>
+
+            <!-- Tabs -->
+            <div class="media-tabs">
+                <button class="tab-btn active" data-tab="photos">&#128248; Photos</button>
+                <button class="tab-btn"         data-tab="videos">&#127916; Videos</button>
             </div>
-        </div>
-    </section>
 
-    <footer style="text-align: center; padding: 50px; opacity: 0.4; font-size: 0.7rem;">
-        CLASSIFIED MATERIAL - BLACK RICE BAND HOUSTON
+            <!-- ===== PHOTOS TAB ===== -->
+            <div id="photos-tab" class="tab-content active">
+                <div class="upload-area clickable" id="photo-drop-zone">
+                    <input type="file" id="photo-input" accept="image/*" multiple hidden>
+                    <span class="upload-icon">&#128248;</span>
+                    <p>Click or drag photos here to upload</p>
+                    <small>JPG, PNG, GIF, WEBP &mdash; saved in your browser</small>
+                </div>
+                <div class="media-grid" id="photo-grid"></div>
+            </div>
+
+            <!-- ===== VIDEOS TAB ===== -->
+            <div id="videos-tab" class="tab-content">
+
+                <!-- Link input -->
+                <div class="upload-area">
+                    <span class="upload-icon">&#127754;</span>
+                    <p>Add a video link</p>
+                    <small>YouTube, iCloud, Google Drive &mdash; any shareable URL</small>
+                    <div class="video-add-form">
+                        <input type="text" id="video-title" class="url-input"
+                               placeholder="Title (e.g. First Practice Tape)">
+                        <input type="text" id="video-url" class="url-input"
+                               placeholder="Video URL or YouTube link">
+                        <button class="btn btn-primary" onclick="addVideoLink()">Add Video</button>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div style="text-align:center">
+                    <div class="divider">&mdash; or upload a video file &mdash;</div>
+                </div>
+
+                <!-- File upload -->
+                <div class="upload-area clickable" id="video-drop-zone">
+                    <input type="file" id="video-input" accept="video/*" multiple hidden>
+                    <span class="upload-icon" style="font-size:2rem">&#128193;</span>
+                    <p>Click or drag video files here</p>
+                    <small>MP4, MOV, WEBM &mdash; available this browser session only</small>
+                </div>
+
+                <div class="media-grid" id="video-grid"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">BLACK RICE</div>
+            <p>St. John's School &middot; Houston, Texas</p>
+            <p class="footer-copy">&copy; <span id="year"></span> Black Rice Band &#129304;</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
+    <script src="media.js"></script>
 </body>
 </html>
